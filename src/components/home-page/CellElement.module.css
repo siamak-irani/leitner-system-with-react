@@ -1,0 +1,108 @@
+.Cell {
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #a6a6a6, -5px -5px 10px #ffffff;
+  display: flex;
+  margin: 0.5rem 0.5rem;
+  padding: 3px 0;
+}
+
+.cell {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+.partition {
+  width: 2.5rem;
+  height: 2rem;
+  margin: 5px 3px;
+  border-radius: 5px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #a6a6a6, -5px -5px 10px #ffffff;
+}
+
+.partition .num {
+  color: rgb(138, 138, 138);
+  font-size: 8px;
+  padding: 0 2px;
+}
+
+.partition .size {
+  font-size: 10px;
+  text-align: center;
+  color: var(--light-black);
+}
+
+.actions {
+  padding: 0px 10px;
+  color: var(--light-black);
+}
+
+.actions .cell-size {
+  width: 80px;
+}
+
+.actions .cell-size .title {
+  font-size: 9px;
+}
+
+.actions .cell-size .num {
+  font-size: 12px;
+}
+
+.actions button {
+  font-size: 12px;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  padding: 4px 0;
+  border-radius: 3px;
+}
+
+.actions button:disable {
+  background-color: rgb(187, 187, 187);
+  color: rgb(143, 143, 143);
+}
+.actions button:disable:hover {
+  box-shadow: none;
+}
+
+.actions button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.actions .active-cell-msg {
+  font-size: 10px;
+  color: rgb(33, 30, 65);
+  max-width: 5rem;
+  height: 50px;
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .cell {
+    grid-template-columns: repeat(8, 1fr);
+    padding: 0 10px;
+  }
+
+  .partition {
+    margin: 5px 5px;
+  }
+
+  .actions {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .Cell{
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+  .cell{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 10px;
+    
+  }
+}

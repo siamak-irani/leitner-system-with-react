@@ -1,10 +1,11 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 
 const RootElement = () => {
   return (
     <div>
-      4343
+      <Outlet />
     </div>
   );
 };
