@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 import classes from "./MainHeader.module.css";
 import MainNavigation from "./MainNavigation";
 import ShowNavBtn from "./ShowNavBtn";
 
 const MainHeader = () => {
+  const [navIsOpen, setNavIsOpen] = useState(false);
+
+  function navBtnHandler(checked: boolean) {
+    setNavIsOpen(checked);
+  }
+
   return (
     <div className={`${classes["MainHeader"]}`}>
-      <ShowNavBtn />
+      <ShowNavBtn onOpenNav={navBtnHandler} />
       <h1 className={`${classes["logo"]}`}>جعبه لایتنر</h1>
-      <MainNavigation />
+      <MainNavigation style={{right: navIsOpen ? "10px": "-200px"}} />
     </div>
   );
 };

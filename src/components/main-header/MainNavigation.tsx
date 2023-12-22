@@ -3,9 +3,13 @@ import React from "react";
 import classes from "./MainNavigation.module.css";
 import { NavLink } from "react-router-dom";
 
-const MainNavigation = () => {
+type MainNavigationProps = {
+  style?: React.CSSProperties;
+};
+
+const MainNavigation = ({ style }: MainNavigationProps) => {
   return (
-    <div className={`${classes["MainNavigation"]}`}>
+    <div style={style} className={`${classes["MainNavigation"]}`}>
       <nav>
         <NavLink to="/">خانه</NavLink>
       </nav>
