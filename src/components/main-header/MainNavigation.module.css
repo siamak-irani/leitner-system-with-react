@@ -5,9 +5,10 @@
   width: 10rem;
   border-radius: 5px;
   padding:1rem 2rem;
-  transition: right .5s;
+  transition: right .2s;
 }
 
 .MainNavigation a{
     text-decoration: underline;
+    font-size: 12px;
 }
