@@ -1,12 +1,15 @@
 import React from "react";
 
 import classes from "./MainNavigation.module.css";
+import { NavLink } from "react-router-dom";
 
 const MainNavigation = () => {
   return (
-    <nav className={`${classes["MainNavigation"]}`}>
-      
-    </nav>
+    <div className={`${classes["MainNavigation"]}`}>
+      <nav>
+        <NavLink to="/">خانه</NavLink>
+      </nav>
+    </div>
   );
 };
 

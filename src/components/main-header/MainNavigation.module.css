@@ -1,0 +1,13 @@
+.MainNavigation {
+  position: absolute;
+  right: 10px;
+  top:3rem;
+  background-color: white;
+  width: 10rem;
+  border-radius: 5px;
+  padding:1rem 2rem;
+}
+
+.MainNavigation a{
+    text-decoration: underline;
+}

@@ -28,10 +28,15 @@ code {
 :root {
   --body-bg: #e0e0e0;
   --light-black-0: rgb(44, 44, 44);
-  --light-black-1:rgb(94, 94, 94);
+  --light-black-1: rgb(94, 94, 94);
 }
 
 button {
+  all: unset;
+  cursor: pointer;
+}
+
+a {
   all: unset;
   cursor: pointer;
 }
