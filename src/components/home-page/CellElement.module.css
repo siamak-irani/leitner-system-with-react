@@ -31,12 +31,12 @@
 .partition .size {
   font-size: 10px;
   text-align: center;
-  color: var(--light-black);
+  color: var(--light-black-0);
 }
 
 .actions {
   padding: 0px 10px;
-  color: var(--light-black);
+  color: var(--light-black-0);
 }
 
 .actions .cell-size {

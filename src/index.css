@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e0e0e0;
+  background-color: var(--body-bg);
   font-family: Vazirmatn;
   text-align: right;
 }
@@ -26,7 +26,9 @@ code {
 }
 
 :root {
-  --light-black: rgb(44, 44, 44);
+  --body-bg: #e0e0e0;
+  --light-black-0: rgb(44, 44, 44);
+  --light-black-1:rgb(94, 94, 94);
 }
 
 button {
