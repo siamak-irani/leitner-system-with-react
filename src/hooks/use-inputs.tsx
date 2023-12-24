@@ -4,7 +4,7 @@ type UseInputConfig = {
   initialInputValue?: string;
 
   valueValidator: (val: string) => {
-    isValid: string;
+    isValid: boolean;
     errorMessage: string;
   };
   valueModifier?: (val: string) => string;
@@ -12,9 +12,9 @@ type UseInputConfig = {
       (such as converting Persian numbers to English in numerical inputs) */
 
   isMutableIfHasError?: boolean;
+
   /* If the input value is managed by external state management,
     these two lines are used */
-
   isUsingInternalState?: boolean;
 
   externalState?: { extValue: string; extValueUpdateFn: () => void };

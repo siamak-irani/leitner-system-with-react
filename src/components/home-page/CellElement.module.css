@@ -58,11 +58,11 @@
   border-radius: 3px;
 }
 
-.actions button:disable {
+.actions button:disabled {
   background-color: rgb(187, 187, 187);
   color: rgb(143, 143, 143);
 }
-.actions button:disable:hover {
+.actions button:disabled:hover {
   box-shadow: none;
 }
 

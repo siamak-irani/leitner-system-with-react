@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import classes from "./WordsList.module.css";
 import Wrapper from "../../ui/Wrapper";
+import WordIndexForm from "./WordIndexForm";
 
 const WordsList = () => {
   const [inputVal, setInputVal] = useState("-1");
@@ -18,25 +19,7 @@ const WordsList = () => {
     <div className={`${classes["WordsList"]}`}>
       <Wrapper>
         <div className={`${classes["word-index-inputs"]}`}>
-          <form
-            onSubmit={formSubmitHandler}
-            className={`${classes["word-index-form"]}`}
-          >
-            <label htmlFor="words-list--number-input">
-              عدد لغتی را که میخواهید یادگیری لغات جدید از آن شروع شود وارد کنید
-              یا اینکه مستقیم از فهرست زیر لغت مورد نظر را پیدا کنید:
-            </label>
-            <div className={`${classes["inputs-container"]}`}>
-              <Wrapper>
-                <input
-                  type="text"
-                  name="words-list--number-input"
-                  id="words-list--number-input"
-                />
-              </Wrapper>
-              <button>ثبت</button>
-            </div>
-          </form>
+       <WordIndexForm formSubmitHandler={formSubmitHandler} />
         </div>
       </Wrapper>
 
