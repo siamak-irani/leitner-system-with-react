@@ -12,6 +12,7 @@ body {
   background-color: var(--body-bg);
   font-family: Vazirmatn;
   text-align: right;
+  color: var(--light-black-0);
 }
 
 code {
@@ -34,9 +35,14 @@ code {
 button {
   all: unset;
   cursor: pointer;
+  user-select: none;
 }
 
 a {
   all: unset;
   cursor: pointer;
+}
+
+input {
+  all: unset;
 }

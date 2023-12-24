@@ -3,6 +3,7 @@ import classes from "./App.module.css";
 import RootElement from "./pages/RootElement";
 import HomePage from "./pages/HomePage";
 import ErrorElement from "./components/ErrorElement";
+import SelectWordsPage from "./pages/SelectWordsPage";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
+      { path: "select-words", element: <SelectWordsPage /> },
       {
         path: "*",
         element: <ErrorElement status={404} />,

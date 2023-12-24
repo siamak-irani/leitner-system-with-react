@@ -1,0 +1,56 @@
+.WordsList {
+  padding: 2rem 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.word-index-form {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.word-index-form label {
+  font-size: 12px;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.word-index-form input {
+  border-radius: 5px;
+  padding: 0.2rem;
+  direction: ltr;
+  width: 5rem;
+  text-align: left;
+  background-color: white;
+  margin: 0.3rem;
+}
+
+.inputs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.inputs-container button {
+  font-size: 12px;
+  background-color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+  height: fit-content;
+}
+
+.inputs-container button:disable {
+  background-color: rgb(187, 187, 187);
+  color: rgb(143, 143, 143);
+}
+.inputs-container button:disable:hover {
+  box-shadow: none;
+}
+
+.inputs-container button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+

@@ -11,11 +11,11 @@ type ErrorElementProps = {
 
 const ErrorElement = ({ status, error }: ErrorElementProps) => {
   const statusCode =
-    status && error instanceof AxiosError && error.response?.status;
+    status || (error instanceof AxiosError && error.response?.status);
 
   let title = "خطا!";
   let message = "مشکلی پیش آمد. لطفا دوباره تلاش کنید";
-
+  
   switch (statusCode) {
     case 404:
       title = "صفحه یافت نشد!";

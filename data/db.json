@@ -1,5 +1,5 @@
 {
-  "all-words": [
+  "all_words": [
     {
       "id": 0,
       "spelling": "the",
@@ -160054,11 +160054,11 @@
       "removed": 0
     }
   },
-  "review-array": [],
+  "review_array": [],
   "progress": {
-    "active-cell": 0,
-    "selected-word-index": -1,
-    "current-word-index": -1
+    "active_cell": 0,
+    "selected_word_index": -1,
+    "current_word_index": -1
   },
   "c1": {
     "p1": []
@@ -160100,7 +160100,7 @@
     "p14": [],
     "p15": []
   },
-  "pushed-forward": {
+  "pushed_forward": {
     "c1": false,
     "c2": false,
     "c3": false,

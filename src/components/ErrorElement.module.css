@@ -1,10 +1,9 @@
 .ErrorElement {
-  height: 100vh;
+  height:calc(100vh - 35px);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--light-black-0);
   direction: rtl;
 }
 
