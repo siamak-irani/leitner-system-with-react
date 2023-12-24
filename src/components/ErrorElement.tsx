@@ -1,19 +1,22 @@
 import React from "react";
 
 import classes from "./ErrorElement.module.css";
-import { Link, useRouteError } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { AxiosError } from "axios";
 
 type ErrorElementProps = {
-  status?: number;
+  status?: number | null;
+  error?: AxiosError | unknown;
 };
 
-const ErrorElement = ({ status }: ErrorElementProps) => {
-  const error = useRouteError();
+const ErrorElement = ({ status, error }: ErrorElementProps) => {
+  const statusCode =
+    status && error instanceof AxiosError && error.response?.status;
 
   let title = "خطا!";
   let message = "مشکلی پیش آمد. لطفا دوباره تلاش کنید";
 
-  switch (status) {
+  switch (statusCode) {
     case 404:
       title = "صفحه یافت نشد!";
       message = "این صفحه وجود ندارد";
