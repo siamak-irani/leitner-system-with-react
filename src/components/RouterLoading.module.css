@@ -10,7 +10,7 @@
   font-size: 20px;
   color: var(--light-black-0);
   opacity: 0;
-  animation: pass 2s ease-in-out infinite;
+  animation: pass 1s ease-in-out infinite;
   text-shadow: 2px 2px 3px #919191;
 }
 
