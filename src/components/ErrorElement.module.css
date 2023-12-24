@@ -1,0 +1,29 @@
+.ErrorElement {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--light-black-0);
+  direction: rtl;
+}
+
+.container h1 {
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.container p{
+  font-size: 14px;
+}
+
+.container a {
+  display: block;
+  margin-top: 2rem;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.container a:hover {
+  text-decoration: none;
+}
