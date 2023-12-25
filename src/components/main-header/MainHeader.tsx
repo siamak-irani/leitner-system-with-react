@@ -12,7 +12,7 @@ const MainHeader = () => {
     setNavIsOpen(checked);
   }
 
-  const backdropClickHandler = () => {
+  const backdropCloseHandler = () => {
     setNavIsOpen(false);
   };
 
@@ -21,11 +21,14 @@ const MainHeader = () => {
       <ShowNavBtn navIsOpen={navIsOpen} onOpenNav={navBtnHandler} />
       <h1 className={`${classes["logo"]}`}>جعبه لایتنر</h1>
       <div className={`${classes["nav-container"]}`}>
-        <MainNavigation className={navIsOpen ? "visiable" : undefined} />
+        <MainNavigation
+          className={navIsOpen ? "visiable" : undefined}
+          onNavigate={backdropCloseHandler}
+        />
         {navIsOpen && (
           <Backdrop
             className="main-nav--backdrop"
-            onClick={backdropClickHandler}
+            onClick={backdropCloseHandler}
           />
         )}
       </div>
