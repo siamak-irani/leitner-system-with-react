@@ -1,0 +1,27 @@
+.WhiteButton {
+  background-color: rgb(243, 243, 243);
+  font-size: 12px;
+  padding: 4px 20px;
+  border-radius: 3px;
+  height: fit-content;
+  align-self: flex-start;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.WhiteButton:active {
+  background-color: white;
+}
+
+.WhiteButton:disabled {
+  background-color: rgb(187, 187, 187);
+  color: rgb(143, 143, 143);
+}
+
+.WhiteButton:disabled:hover {
+  box-shadow: none;
+}
+
+.WhiteButton:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
