@@ -9,15 +9,7 @@ interface WrapperProps extends React.ComponentPropsWithoutRef<"div"> {
 }
 
 const Wrapper = ({ children, className, ...rest }: WrapperProps) => {
-  return (
-    <div
-      className={`${classes["Wrapper"]} ${
-        className ? classes[className] : null
-      }`}
-    >
-      {children}
-    </div>
-  );
+  return <div className={`${className} ${classes["Wrapper"]}`}>{children}</div>;
 };
 
 export default Wrapper;

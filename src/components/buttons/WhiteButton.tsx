@@ -8,7 +8,7 @@ interface WhiteButtonProps extends React.ComponentPropsWithoutRef<"button"> {
 
 const WhiteButton = ({ className, children, ...rest }: WhiteButtonProps) => {
   return (
-    <button className={`${classes["WhiteButton"]} ${className}`} {...rest}>
+    <button className={`${className} ${classes["WhiteButton"]}`} {...rest}>
       {children}
     </button>
   );

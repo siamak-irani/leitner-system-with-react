@@ -11,6 +11,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
+  justify-items: center;
 }
 
 .partition {
@@ -49,27 +50,11 @@
   font-size: 12px;
 }
 
-.actions button {
-  font-size: 12px;
-  background-color: white;
-  width: 100%;
-  text-align: center;
-  padding: 4px 0;
-  border-radius: 3px;
-}
-
-.actions button:disabled {
-  background-color: rgb(187, 187, 187);
-  color: rgb(143, 143, 143);
-}
-.actions button:disabled:hover {
-  box-shadow: none;
-}
-
 .actions button:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
+} 
 
+/*  */
 .actions .active-cell-msg {
   font-size: 10px;
   color: rgb(33, 30, 65);

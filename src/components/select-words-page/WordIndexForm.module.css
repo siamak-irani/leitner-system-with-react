@@ -1,3 +1,7 @@
+.WordIndexForm{
+  margin-bottom: 1rem;
+}
+
 .word-index-form {
   direction: rtl;
   display: flex;
@@ -31,29 +35,6 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 1rem;
-}
-
-.acitons-container button {
-  font-size: 12px;
-  background-color: white;
-  padding: 4px 20px;
-  border-radius: 3px;
-  height: fit-content;
-  align-self: flex-start;
-  margin: 5px 0;
-}
-
-.acitons-container button:disabled {
-  background-color: rgb(187, 187, 187);
-  color: rgb(143, 143, 143);
-}
-
-.acitons-container button:disabled:hover {
-  box-shadow: none;
-}
-
-.acitons-container button:hover {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .input-err-msg {

@@ -2,6 +2,7 @@ import React from "react";
 
 import classes from "./CellElement.module.css";
 import { type Cell } from "../../lib/type";
+import WhiteButton from "../buttons/WhiteButton";
 
 type CellProps = {
   cell: Cell;
@@ -29,7 +30,7 @@ const CellElement = ({ cell, className }: CellProps) => {
           <span className={`${classes["title"]}`}>تعداد واژه‌ها: </span>
           <span className={`${classes["num"]}`}>0000</span>
         </div>
-        <button>مرور</button>
+        <WhiteButton style={{margin:"0 auto"}}>مرور</WhiteButton>
         <p className={`${classes["active-cell-msg"]}`}>
           {/* الان نوبت مرور این خانه است */}
         </p>
