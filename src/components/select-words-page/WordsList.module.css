@@ -6,3 +6,11 @@
   flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+  .WordsList {
+    max-width: 40rem;
+    margin: auto;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}

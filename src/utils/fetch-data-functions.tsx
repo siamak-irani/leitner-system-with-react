@@ -9,7 +9,7 @@ export const fetchProgressData = async () => {
 export const fetchPaginatedWordsData = async (
   page: number
 ) => {
-  const limit = 10;
+  const limit = 15;
   const res = await axios.get("all_words", {
     params: {
       _limit: limit,

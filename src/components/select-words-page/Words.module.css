@@ -1,0 +1,51 @@
+.words {
+  text-align: left;
+}
+
+.words ol {
+  list-style: none;
+  counter-reset: item;
+  padding: 0.5rem;
+}
+.words li {
+  counter-increment: item;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.words li label {
+  font-size: 14px;
+  color: var(--light-black-1);
+  display: block;
+  width: 10rem;
+}
+
+.words li:hover {
+  border-radius: 5px;
+  color: var(--light-black-0);
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #a6a6a6, -5px -5px 10px #ffffff;
+}
+
+.words li:before {
+  content: counter(item);
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 18px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #a6a6a6, -5px -5px 10px #ffffff;
+  text-align: center;
+  margin: 0.2rem 0.5rem 0.2rem 0.2rem;
+  transition: all 0.1s;
+}
+
+.words li:hover::before {
+  transform: scale(1.2);
+}
+
+@media screen and (min-width: 768px) {
+  .words li label {
+    width: 20rem;
+  }
+}
