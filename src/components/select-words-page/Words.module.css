@@ -1,5 +1,7 @@
 .words {
   text-align: left;
+  height: 475px;
+  overflow-y: scroll;
 }
 
 .words ol {
@@ -13,8 +15,15 @@
   display: flex;
 }
 
+.words li *{
+  cursor: pointer;
+}
+
 .words li label {
   font-size: 14px;
+  height: 26px;
+  display: flex;
+  align-items: center;
   color: var(--light-black-1);
   display: block;
   width: 10rem;
@@ -33,6 +42,7 @@
   border-radius: 50%;
   font-size: 12px;
   width: 18px;
+  height: 20px;
   background: #e0e0e0;
   box-shadow: 5px 5px 10px #a6a6a6, -5px -5px 10px #ffffff;
   text-align: center;
@@ -42,6 +52,29 @@
 
 .words li:hover::before {
   transform: scale(1.2);
+}
+
+.loading-icon{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.loading-icon svg{
+  fill: rgb(189, 189, 189);
+  animation: rotation 1s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (min-width: 768px) {

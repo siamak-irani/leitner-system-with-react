@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import classes from "./Words.module.css";
 import Wrapper from "../../ui/Wrapper";
 import { Word } from "../../lib/type";
+import { useInfiniteWordsList } from "../../hooks/use-infinte-words-data";
+import { ReactComponent as LoadingSVG } from "../../files/icons/refresh_FILL0_wght400_GRAD0_opsz24.svg";
 
-type WordsProps = {
-  wordsList: Word[] | undefined;
-};
+const Words = () => {
+  const OLRef = useRef<HTMLOListElement>(null);
+  const parrentRef = useRef<HTMLDivElement>(null);
 
-const Words = ({ wordsList }: WordsProps) => {
+  const wordsQuery = useInfiniteWordsList(parrentRef, OLRef);
+
+  const wordsList = wordsQuery?.data?.pages.flatMap((page) => page.words);
+
   return (
     <div className={`${classes["Words"]}`}>
       <Wrapper>
-        <div className={`${classes["words"]}`}>
-          <ol>
+        <div className={`${classes["words"]}`} ref={parrentRef}>
+          <ol ref={OLRef}>
             {wordsList?.map((word, index) => {
               return (
                 <li key={index}>
@@ -30,6 +35,11 @@ const Words = ({ wordsList }: WordsProps) => {
               );
             })}
           </ol>
+          {wordsQuery.isLoading && (
+            <div className={`${classes["loading-icon"]}`}>
+              <LoadingSVG />
+            </div>
+          )}
         </div>
       </Wrapper>
     </div>

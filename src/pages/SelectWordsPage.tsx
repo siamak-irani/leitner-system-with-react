@@ -8,14 +8,11 @@ import RouterLoading from "../components/RouterLoading";
 import { useInfiniteWordsList } from "../hooks/use-infinte-words-data";
 
 const SelectWordsPage = () => {
-  const wordsQuery = useInfiniteWordsList();
 
-  if (wordsQuery.isLoading) return <RouterLoading />;
-  if (wordsQuery.isError) return <ErrorElement error={wordsQuery.error} />;
 
   return (
     <>
-      <WordsList infiniteWordsData={wordsQuery.data} />
+      <WordsList />
     </>
   );
 };

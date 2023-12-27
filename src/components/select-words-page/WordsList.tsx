@@ -6,15 +6,12 @@ import WordIndexForm from "./WordIndexForm";
 import { PaginatedWordsData } from "../../lib/type";
 import { InfiniteData } from "react-query";
 import Words from "./Words";
+import { useInfiniteWordsList } from "../../hooks/use-infinte-words-data";
 
-type WordsListProps = {
-  infiniteWordsData: InfiniteData<PaginatedWordsData> | undefined | undefined;
-};
-
-const WordsList = ({ infiniteWordsData }: WordsListProps) => {
+const WordsList = () => {
   const [inputVal, setInputVal] = useState("-1");
 
-  const wordsList = infiniteWordsData?.pages.flatMap((page) => page.words);
+
 
   // const inputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
   //   setInputVal(event.target.value);
@@ -27,7 +24,7 @@ const WordsList = ({ infiniteWordsData }: WordsListProps) => {
   return (
     <div className={`${classes["WordsList"]}`}>
       <WordIndexForm formSubmitHandler={formSubmitHandler} />
-      <Words wordsList={wordsList} />
+      <Words />
     </div>
   );
 };

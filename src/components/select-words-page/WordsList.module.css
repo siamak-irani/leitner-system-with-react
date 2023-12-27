@@ -11,6 +11,7 @@
     max-width: 40rem;
     margin: auto;
     flex-direction: row-reverse;
+    align-items: flex-start;
     justify-content: space-between;
   }
 }
