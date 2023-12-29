@@ -7,24 +7,25 @@ import { PaginatedWordsData } from "../../lib/type";
 import { InfiniteData } from "react-query";
 import Words from "./Words";
 import { useInfiniteWordsList } from "../../hooks/use-infinte-words-data";
+import Modal from "../../ui/Modal";
+import ConfirmWord from "./ConfirmWord";
 
 const WordsList = () => {
-  const [inputVal, setInputVal] = useState("-1");
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-
-
-  // const inputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setInputVal(event.target.value);
-  // };
-
-  const formSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
+  const formSubmitHandler = (
+    event: React.FormEvent<HTMLFormElement> | React.ChangeEvent<HTMLInputElement>
+  ) => {
     event.preventDefault();
+    setModalIsOpen(true)
   };
 
   return (
     <div className={`${classes["WordsList"]}`}>
-      <WordIndexForm formSubmitHandler={formSubmitHandler} />
-      <Words />
+      <WordIndexForm onSubmitForm={formSubmitHandler} />
+      <Words onSelectWord={formSubmitHandler} />
+      <ConfirmWord isVisiable={true} />
+
     </div>
   );
 };

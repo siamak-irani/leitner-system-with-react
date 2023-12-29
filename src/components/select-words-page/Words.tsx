@@ -6,7 +6,11 @@ import { Word } from "../../lib/type";
 import { useInfiniteWordsList } from "../../hooks/use-infinte-words-data";
 import { ReactComponent as LoadingSVG } from "../../files/icons/refresh_FILL0_wght400_GRAD0_opsz24.svg";
 
-const Words = () => {
+type WordsProps = {
+  onSelectWord: (e:  React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+const Words = ({ onSelectWord }: WordsProps) => {
   const OLRef = useRef<HTMLOListElement>(null);
   const parrentRef = useRef<HTMLDivElement>(null);
 
@@ -27,6 +31,7 @@ const Words = () => {
                   </label>
                   <input
                     type="radio"
+                    onChange={onSelectWord}
                     name="word-list--word"
                     value="0"
                     id={"words-list--word-" + index}

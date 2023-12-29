@@ -1,0 +1,59 @@
+.confirm-word-modal {
+  background-color: var(--body-bg);
+}
+
+.confirm-word-modal svg{
+  width: 20px;
+  height: 20px;
+  fill: var(--light-black-0);
+  cursor: pointer;
+}
+
+.confirm-word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirm-word h1 {
+  font-size: 14px;
+  min-width: 15rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.confirm-word p {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  font-size: 12px;
+  /* color: white; */
+  padding: 0.5rem 1rem;
+}
+
+.buttons .confirm {
+  color: var(--light-black-0);
+}
+
+.buttons .cancel {
+  color: rgb(255, 46, 46);
+}
+
+.buttons .cancel:hover {
+  background-color: rgb(255, 46, 46);
+  color: white;
+}
+
+.buttons .cancel:active {
+  background-color: transparent;
+  color: rgb(255, 46, 46);
+}

@@ -15,7 +15,7 @@
   display: flex;
 }
 
-.words li *{
+.words li * {
   cursor: pointer;
 }
 
@@ -25,8 +25,10 @@
   display: flex;
   align-items: center;
   color: var(--light-black-1);
-  display: block;
+  display: flex;
+  align-items: center;
   width: 10rem;
+  user-select: none;
 }
 
 .words li:hover {
@@ -38,7 +40,9 @@
 
 .words li:before {
   content: counter(item);
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   font-size: 12px;
   width: 18px;
@@ -54,14 +58,14 @@
   transform: scale(1.2);
 }
 
-.loading-icon{
+.loading-icon {
   height: 30px;
   display: flex;
   justify-content: center;
   align-self: center;
 }
 
-.loading-icon svg{
+.loading-icon svg {
   fill: rgb(189, 189, 189);
   animation: rotation 1s ease-in-out;
   animation-iteration-count: infinite;
