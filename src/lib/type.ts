@@ -19,3 +19,9 @@ export type PaginatedWordsData = {
   nextPage: number | null;
   prevPage: number | null;
 };
+
+export type Progress = {
+  active_cell?: number;
+  selected_word_index?: number;
+  current_word_index?: number;
+};

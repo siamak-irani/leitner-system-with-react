@@ -160001,7 +160001,6 @@
       "free_dictionary_api": ""
     }
   ],
-  "selected-words": [],
   "words-count": {
     "entered": 0,
     "cells": {
@@ -160057,8 +160056,8 @@
   "review_array": [],
   "progress": {
     "active_cell": 0,
-    "selected_word_index": -1,
-    "current_word_index": -1
+    "selected_word_index": 9,
+    "current_word_index": 9
   },
   "c1": {
     "p1": []

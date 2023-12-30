@@ -10,7 +10,7 @@ import { AxiosError } from "axios";
 const RootElement = () => {
   const navigate = useNavigate()
   const progressQuery = useQuery({
-    queryKey: "progress",
+    queryKey: ["progress"],
     queryFn: fetchProgressData,
   });
 

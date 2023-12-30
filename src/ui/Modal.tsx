@@ -20,13 +20,13 @@ const Overlay = ({ children, className, ...rest }: DivElementPrpps) => {
   );
 };
 
-const Modal = ({ className, children, ...rest }: DivElementPrpps) => {
+const Modal = ({ className, onClick, children, ...rest }: DivElementPrpps) => {
   return (
     <div className={`${classes["Modal"]}`}>
       <Overlay className={className} {...rest}>
         {children}
       </Overlay>
-      <Backdrop />
+      <Backdrop onClick={onClick} />
     </div>
   );
 };

@@ -2,7 +2,7 @@
   background-color: var(--body-bg);
 }
 
-.confirm-word-modal svg{
+.confirm-word-modal svg {
   width: 20px;
   height: 20px;
   fill: var(--light-black-0);
@@ -32,6 +32,7 @@
   width: 10rem;
   display: flex;
   justify-content: space-between;
+  direction: rtl;
 }
 
 .buttons button {
@@ -56,4 +57,9 @@
 .buttons .cancel:active {
   background-color: transparent;
   color: rgb(255, 46, 46);
+}
+
+.error-msg {
+  font-size: 12px;
+  padding: 0.5rem 1rem;
 }

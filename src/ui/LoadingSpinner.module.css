@@ -1,0 +1,22 @@
+.LoadingSpinner {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoadingSpinner svg {
+  fill: rgb(189, 189, 189);
+  animation: rotation 1s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

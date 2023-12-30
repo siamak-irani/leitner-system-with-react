@@ -6,9 +6,9 @@ interface CustomBtnProps extends React.ComponentPropsWithoutRef<"button"> {
   children?: React.ReactNode;
 }
 
-const CustomBtn = ({ children, className }: CustomBtnProps) => {
+const CustomBtn = ({ children, className, ...rest }: CustomBtnProps) => {
   return (
-    <button className={`${classes["CustomBtn"]} ${className}`}>
+    <button className={`${classes["CustomBtn"]} ${className}`} {...rest}>
       {children}
     </button>
   );

@@ -5,9 +5,13 @@ import Wrapper from "../../ui/Wrapper";
 import { Word } from "../../lib/type";
 import { useInfiniteWordsList } from "../../hooks/use-infinte-words-data";
 import { ReactComponent as LoadingSVG } from "../../files/icons/refresh_FILL0_wght400_GRAD0_opsz24.svg";
+import LoadingSpinner from "../../ui/LoadingSpinner";
 
 type WordsProps = {
-  onSelectWord: (e:  React.ChangeEvent<HTMLInputElement>) => void;
+  onSelectWord: (
+    e: React.MouseEvent<HTMLInputElement, MouseEvent>,
+    inputValue: number
+  ) => void;
 };
 
 const Words = ({ onSelectWord }: WordsProps) => {
@@ -31,20 +35,18 @@ const Words = ({ onSelectWord }: WordsProps) => {
                   </label>
                   <input
                     type="radio"
-                    onChange={onSelectWord}
+                    onClick={(e) => {
+                      onSelectWord(e, index);
+                    }}
                     name="word-list--word"
-                    value="0"
+                    value={index}
                     id={"words-list--word-" + index}
                   />
                 </li>
               );
             })}
           </ol>
-          {wordsQuery.isLoading && (
-            <div className={`${classes["loading-icon"]}`}>
-              <LoadingSVG />
-            </div>
-          )}
+          {wordsQuery.isFetchingNextPage && <LoadingSpinner />}
         </div>
       </Wrapper>
     </div>

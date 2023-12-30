@@ -8,7 +8,10 @@ import WhiteButton from "../buttons/WhiteButton";
 import persianNumsToEnglish from "../../utils/fa-nums-to-en";
 
 type WordIndexFormProps = {
-  onSubmitForm: (e: React.FormEvent<HTMLFormElement>) => void;
+  onSubmitForm: (
+    e: React.FormEvent<HTMLFormElement>,
+    inputvalue: number
+  ) => void;
 };
 
 const WordIndexForm = ({ onSubmitForm }: WordIndexFormProps) => {
@@ -30,7 +33,9 @@ const WordIndexForm = ({ onSubmitForm }: WordIndexFormProps) => {
     <div className={`${classes["WordIndexForm"]}`}>
       <Wrapper>
         <form
-          onSubmit={onSubmitForm}
+          onSubmit={(e) => {
+            onSubmitForm(e, parseInt(value));
+          }}
           className={`${classes["word-index-form"]}`}
         >
           {/* <label htmlFor="words-list--number-input">
