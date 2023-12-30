@@ -14,11 +14,15 @@ const WordsList = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
+  console.log(queryClient.getQueryData<Progress>(["progress"])?.selected_word_index )
+
   if (
     queryClient.getQueryData<Progress>(["progress"])?.selected_word_index !== -1
   )
     return (
-        <p className={`${classes["word-selected-before"]}`}>شماره قبلا لغت آغازین را انتخاب کرده‌اید!</p>
+      <p className={`${classes["word-selected-before"]}`}>
+        شماره قبلا لغت آغازین را انتخاب کرده‌اید!
+      </p>
     );
 
   const formSubmitHandler = (

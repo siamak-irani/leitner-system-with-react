@@ -2,11 +2,6 @@ import axios from "../api/axios";
 import { PaginatedWordsData } from "../lib/type";
 import { delay } from "./delay";
 
-export const fetchProgressData = async () => {
-  const res = await axios.get("progress");
-  return res.data;
-};
-
 export const fetchPaginatedWordsData = async (page: number) => {
   const limit = 20;
   const res = await axios.get("all_words", {
