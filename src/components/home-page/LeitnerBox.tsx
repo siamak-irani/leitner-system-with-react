@@ -1,19 +1,24 @@
 import React from "react";
-import { cells } from "../../utils/default-values";
 import classes from "./LeitnerBox.module.css";
 import CellElement from "./CellElement";
+import { WordsCount } from "../../lib/type";
 
-const { cell1, cell2, cell3, cell4, cell5 } = cells;
+type LeitnerBoxProps = {
+  data: WordsCount;
+};
 
-const LeitnerBox = () => {
+const LeitnerBox = ({ data }: LeitnerBoxProps) => {
+  const { cells } = data;
+  const { c1, c2, c3, c4, c5 } = cells;
+
   return (
     <div className={`${classes["LeitnerBox"]}`}>
       <div className={`${classes["cells-container"]}`}>
-        <CellElement cell={cell1} />
-        <CellElement cell={cell2} />
-        <CellElement cell={cell3} />
-        <CellElement cell={cell4} />
-        <CellElement cell={cell5} />
+        <CellElement cellCount={c1} />
+        <CellElement cellCount={c2} />
+        <CellElement cellCount={c3} />
+        <CellElement cellCount={c4} />
+        <CellElement cellCount={c5} />
       </div>
     </div>
   );

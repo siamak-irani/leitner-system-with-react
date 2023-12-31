@@ -160007,52 +160007,153 @@
       "total": 0,
       "c1": {
         "total": 0,
-        "p1": 0
+        "partitions": [
+          {
+            "name": "p1",
+            "count": 0
+          }
+        ]
       },
       "c2": {
         "total": 0,
-        "p1": 0,
-        "p2": 0
+        "partitions": [
+          {
+            "name": "p1",
+            "count": 0
+          },
+          {
+            "name": "p2",
+            "count": 0
+          }
+        ]
       },
       "c3": {
         "total": 0,
-        "p1": 0,
-        "p2": 0,
-        "p3": 0,
-        "p4": 0
+        "partitions": [
+          {
+            "name": "p1",
+            "count": 0
+          },
+          {
+            "name": "p2",
+            "count": 0
+          },
+          {
+            "name": "p3",
+            "count": 0
+          },
+          {
+            "name": "p4",
+            "count": 0
+          }
+        ]
       },
       "c4": {
         "total": 0,
-        "p1": 0,
-        "p2": 0,
-        "p3": 0,
-        "p4": 0,
-        "p5": 0,
-        "p6": 0,
-        "p7": 0,
-        "p8": 0
+        "partitions": [
+          {
+            "name": "p1",
+            "count": 0
+          },
+          {
+            "name": "p2",
+            "count": 0
+          },
+          {
+            "name": "p3",
+            "count": 0
+          },
+          {
+            "name": "p4",
+            "count": 0
+          },
+          {
+            "name": "p5",
+            "count": 0
+          },
+          {
+            "name": "p6",
+            "count": 0
+          },
+          {
+            "name": "p7",
+            "count": 0
+          },
+          {
+            "name": "p8",
+            "count": 0
+          }
+        ]
       },
       "c5": {
         "total": 0,
-        "p1": 0,
-        "p2": 0,
-        "p3": 0,
-        "p4": 0,
-        "p5": 0,
-        "p6": 0,
-        "p7": 0,
-        "p8": 0,
-        "p9": 0,
-        "p10": 0,
-        "p11": 0,
-        "p12": 0,
-        "p13": 0,
-        "p14": 0,
-        "p15": 0
-      },
-      "removed": 0
-    }
+        "partitions": [
+          {
+            "name": "p1",
+            "count": 0
+          },
+          {
+            "name": "p2",
+            "count": 0
+          },
+          {
+            "name": "p3",
+            "count": 0
+          },
+          {
+            "name": "p4",
+            "count": 0
+          },
+          {
+            "name": "p5",
+            "count": 0
+          },
+          {
+            "name": "p6",
+            "count": 0
+          },
+          {
+            "name": "p7",
+            "count": 0
+          },
+          {
+            "name": "p8",
+            "count": 0
+          },
+          {
+            "name": "p9",
+            "count": 0
+          },
+          {
+            "name": "p10",
+            "count": 0
+          },
+          {
+            "name": "p11",
+            "count": 0
+          },
+          {
+            "name": "p12",
+            "count": 0
+          },
+          {
+            "name": "p13",
+            "count": 0
+          },
+          {
+            "name": "p14",
+            "count": 0
+          },
+          {
+            "name": "p15",
+            "count": 0
+          }
+        ]
+      }
+    },
+    "removed": 0
   },
+  
   "review_array": [],
   "progress": {
     "active_cell": 0,

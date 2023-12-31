@@ -25,3 +25,26 @@ export type Progress = {
   selected_word_index?: number;
   current_word_index?: number;
 };
+
+export type PartitionCounts = {
+  name: string;
+  count: number;
+};
+
+export type CellCounts = {
+  total: number;
+  partitions: PartitionCounts[];
+};
+
+export type WordsCount = {
+  entered: number;
+  cells: {
+    c1: CellCounts;
+    c2: CellCounts;
+    c3: CellCounts;
+    c4: CellCounts;
+    c5: CellCounts;
+  };
+  removed: number;
+};
+
