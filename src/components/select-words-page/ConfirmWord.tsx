@@ -12,6 +12,7 @@ import { useProgressMutation } from "../../hooks/use-progress-mutation";
 import { useQueryClient } from "react-query";
 import { Progress } from "../../lib/type";
 import { useNavigate } from "react-router-dom";
+import { useProgressQuery } from "../../hooks/use-progress-qurey";
 
 type ConfirmWordProps = {
   isVisiable: boolean;
@@ -28,14 +29,12 @@ const ConfirmWord = ({
   const queryClient = useQueryClient();
   const wordQuery = useWord(selectedIndex);
   const progressMutation = useProgressMutation();
+  const progressQuery = useProgressQuery();
 
   const confirmBtnHandler = () => {
-    const progressData: Progress | undefined =
-      queryClient.getQueryData("progress");
-
     progressMutation
       .mutateAsync({
-        ...progressData,
+        ...progressQuery.data,
         selected_word_index: selectedIndex,
         current_word_index: selectedIndex,
       })
@@ -43,6 +42,8 @@ const ConfirmWord = ({
         navigate("/");
       });
   };
+
+  // console.log("data " + progressMutation.data )
 
   if (!isVisiable) return null;
 

@@ -1,12 +1,13 @@
 import { useMutation, useQueryClient } from "react-query";
-import { setProgresss } from "../utils/http-requests/progress-requests";
+import { setProgress } from "../utils/http-requests/progress-requests";
+import { Progress } from "../lib/type";
 
 export const useProgressMutation = () => {
   const queryClient = useQueryClient();
   const progressMutation = useMutation({
-    mutationFn: setProgresss,
-    onSuccess: () => {
-      queryClient.invalidateQueries(["progress"]);
+    mutationFn: setProgress,
+    onSuccess: (data) => {
+      queryClient.invalidateQueries<Progress>(["progress"]);
     },
   });
 

@@ -6,6 +6,7 @@ export const getProgress = async () => {
   return res.data;
 };
 
-export const setProgresss = async (updatedProgress: Progress) => {
+export const setProgress = async (updatedProgress: Progress) => {
   const req = await axios.put("progress", updatedProgress);
+  return req.data;
 };

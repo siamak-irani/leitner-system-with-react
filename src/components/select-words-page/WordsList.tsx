@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import classes from "./WordsList.module.css";
 import WordIndexForm from "./WordIndexForm";
@@ -7,23 +7,17 @@ import ConfirmWord from "./ConfirmWord";
 import { useNavigate } from "react-router-dom";
 import { useQueryClient } from "react-query";
 import { Progress } from "../../lib/type";
+import { useProgressQuery } from "../../hooks/use-progress-qurey";
 
 const WordsList = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [wordIndex, setWordIndex] = useState(-1);
   const navigate = useNavigate();
-  const queryClient = useQueryClient();
+  const progressQuery = useProgressQuery();
 
-  console.log(queryClient.getQueryData<Progress>(["progress"])?.selected_word_index )
-
-  if (
-    queryClient.getQueryData<Progress>(["progress"])?.selected_word_index !== -1
-  )
-    return (
-      <p className={`${classes["word-selected-before"]}`}>
-        شماره قبلا لغت آغازین را انتخاب کرده‌اید!
-      </p>
-    );
+  useEffect(() => {
+    if (progressQuery.data.selected_word_index !== -1) navigate("/");
+  }, [progressQuery.data.selected_word_index]);
 
   const formSubmitHandler = (
     event: React.FormEvent<HTMLFormElement>,

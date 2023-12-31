@@ -3,14 +3,16 @@ import LeitnerBox from "../components/home-page/LeitnerBox";
 import { useQueryClient } from "react-query";
 import { Progress } from "../lib/type";
 import { useNavigate } from "react-router-dom";
+import { useProgressQuery } from "../hooks/use-progress-qurey";
 
 const HomePage = () => {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
-  const progressQuery = queryClient.getQueryData<Progress>(["progress"]);
+  const progressQuery = useProgressQuery();
 
   useEffect(() => {
-    if (progressQuery?.selected_word_index === -1) navigate("select-words");
+    // console.log(progressQuery)
+    if (progressQuery.data.selected_word_index === -1) navigate("select-words");
   }, [progressQuery]);
   return (
     <div className="home-page">

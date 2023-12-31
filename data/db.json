@@ -160056,8 +160056,8 @@
   "review_array": [],
   "progress": {
     "active_cell": 0,
-    "selected_word_index": -1,
-    "current_word_index": -1
+    "selected_word_index": 5,
+    "current_word_index": 5
   },
   "c1": {
     "p1": []
