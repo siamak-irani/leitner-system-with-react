@@ -1,12 +1,7 @@
 .LeitnerBox {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:2rem;
-}
-
-@media screen and (min-width: 1024px) {
-  .cells-container {
-    display: flex;
-  }
+  margin-top:1rem;
 }

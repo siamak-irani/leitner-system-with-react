@@ -36,15 +36,16 @@ export type CellCounts = {
   partitions: PartitionCounts[];
 };
 
-export type WordsCount = {
-  entered: number;
-  cells: {
-    c1: CellCounts;
-    c2: CellCounts;
-    c3: CellCounts;
-    c4: CellCounts;
-    c5: CellCounts;
-  };
-  removed: number;
+export type CellsCounts = {
+  c1: CellCounts;
+  c2: CellCounts;
+  c3: CellCounts;
+  c4: CellCounts;
+  c5: CellCounts;
 };
 
+export type WordsCount = {
+  entered: number;
+  cells: CellsCounts;
+  removed: number;
+};

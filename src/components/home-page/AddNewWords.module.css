@@ -1,0 +1,46 @@
+.AddNewWords {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.add-word--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0rem 1rem; */
+  border-radius: 100px !important;
+}
+
+.add-icon {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.add-icon svg {
+  margin: 0.5rem;
+  fill:var(--light-black-1);
+  transition: transform .8s;
+}
+
+.add-text {
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: width 0.6s;
+  width: 0;
+}
+
+.AddNewWords:hover .add-text {
+  width: 155px;
+}
+
+.AddNewWords:hover .add-icon svg{
+    transform: rotate(-180deg);
+}
+
+.add-text p {
+  font-size: 14px;
+  overflow: hidden;
+  width: 122px;
+  margin: 0 1rem;
+}
