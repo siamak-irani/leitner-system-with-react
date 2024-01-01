@@ -7,11 +7,22 @@ import WhiteButton from "../buttons/WhiteButton";
 type CellProps = {
   cellCount: CellCounts;
   className?: string;
+  isActive: boolean;
+  onWordReview: () => void;
 };
 
-const CellElement = ({ cellCount, className }: CellProps) => {
+const CellElement = ({
+  cellCount,
+  className,
+  isActive,
+  onWordReview,
+}: CellProps) => {
   return (
-    <div className={`${classes["Cell"]} ${className && classes[className]}`}>
+    <div
+      className={`${classes["Cell"]} ${className && classes[className]} ${
+        !isActive ? classes["inactive"] : null
+      }`}
+    >
       <div className={`${classes["cell"]}`}>
         {cellCount.partitions.map((p, index) => {
           return (
@@ -30,7 +41,13 @@ const CellElement = ({ cellCount, className }: CellProps) => {
           <span className={`${classes["title"]}`}>تعداد واژه‌ها: </span>
           <span className={`${classes["num"]}`}>{cellCount.total}</span>
         </div>
-        <WhiteButton style={{ margin: "0 auto" }}>مرور</WhiteButton>
+        <WhiteButton
+          onClick={onWordReview}
+          style={{ margin: "0 auto" }}
+          disabled={!isActive}
+        >
+          مرور
+        </WhiteButton>
         <p className={`${classes["active-cell-msg"]}`}>
           {/* الان نوبت مرور این خانه است */}
         </p>

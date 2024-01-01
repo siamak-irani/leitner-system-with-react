@@ -6,11 +6,19 @@
   padding: 0.5rem 0;
   min-width: 216px;
   height: 267px;
-  border: 1px solid var(--positive-green);
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border: 1px solid transparent;
+}
+
+.WordInfo .positive {
+  border: 1px solid var(--positive-green);
+}
+
+.WordInfo .negative {
+  border: 1px solid var(--negative-red);
 }
 
 .word-info .word {
@@ -19,12 +27,19 @@
 }
 
 .word-info .right-answer .text {
-  color: var(--positive-green);
   margin-bottom: 1rem;
 }
 
 .word-info .user-answer .text {
   margin-bottom: 1rem;
+}
+
+.word-info .user-answer .positive {
+  color: var(--positive-green);
+}
+
+.word-info .user-answer .negative {
+  color: var(--negative-green);
 }
 
 .word-info .right-answer .caption,

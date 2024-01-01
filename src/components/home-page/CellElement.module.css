@@ -7,6 +7,10 @@
   padding: 3px 0;
 }
 
+.inactive{
+  color:lightgray;
+}
+
 .cell {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

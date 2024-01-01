@@ -6,19 +6,25 @@ import { CellsCounts } from "../../lib/type";
 
 type BoxContainerProps = {
   cells: CellsCounts;
+  activeCell: number;
+  onWordReview: () => void;
 };
 
-const BoxContainer = ({ cells }: BoxContainerProps) => {
+const BoxContainer = ({
+  cells,
+  activeCell,
+  onWordReview,
+}: BoxContainerProps) => {
   const { c1, c2, c3, c4, c5 } = cells;
 
   return (
     <div className={`${classes["BoxContainer"]}`}>
       <div className={`${classes["cells-container"]}`}>
-        <CellElement cellCount={c1} />
-        <CellElement cellCount={c2} />
-        <CellElement cellCount={c3} />
-        <CellElement cellCount={c4} />
-        <CellElement cellCount={c5} />
+        <CellElement onWordReview={onWordReview} isActive={activeCell === 1} cellCount={c1} />
+        <CellElement onWordReview={onWordReview} isActive={activeCell === 2} cellCount={c2} />
+        <CellElement onWordReview={onWordReview} isActive={activeCell === 3} cellCount={c3} />
+        <CellElement onWordReview={onWordReview} isActive={activeCell === 4} cellCount={c4} />
+        <CellElement onWordReview={onWordReview} isActive={activeCell === 5} cellCount={c5} />
       </div>
     </div>
   );

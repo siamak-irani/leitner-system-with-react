@@ -16,6 +16,7 @@
 .WhiteButton:disabled {
   background-color: rgb(187, 187, 187);
   color: rgb(143, 143, 143);
+  cursor: not-allowed;
 }
 
 .WhiteButton:disabled:hover {
