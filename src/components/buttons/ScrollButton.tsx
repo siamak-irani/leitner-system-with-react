@@ -16,7 +16,7 @@ const ScrollButton = ({
   ...rest
 }: ScrollButtonProps) => {
   return (
-    <button className={`${classes["ScrollButton"]}`}>
+    <button className={`${classes["ScrollButton"]}`} {...rest}>
       <Wrapper className={`${classes["sroll-btn--wrapper"]}`}>
         <div
           className={`${classes["icon"]} ${
