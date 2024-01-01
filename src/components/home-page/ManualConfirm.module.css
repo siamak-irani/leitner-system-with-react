@@ -1,0 +1,12 @@
+.ManualConfirm {
+  margin-bottom: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+.ManualConfirm button {
+  font-size: 10px;
+  width: 3rem;
+}

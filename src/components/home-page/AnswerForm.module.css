@@ -9,7 +9,7 @@
   box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
   font-size: 14px;
   padding:5px 5px;
-  margin-bottom: 1rem;
+  margin:0 1rem 1rem;
 }
 
 .answer-form .btn{

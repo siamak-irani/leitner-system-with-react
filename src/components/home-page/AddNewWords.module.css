@@ -19,14 +19,14 @@
 
 .add-icon svg {
   margin: 0.5rem;
-  fill:var(--light-black-1);
-  transition: transform .8s;
+  fill: var(--light-black-1);
+  transition: transform 0.4s;
 }
 
 .add-text {
   box-sizing: border-box;
   overflow: hidden;
-  transition: width 0.6s;
+  transition: width 0.4s;
   width: 0;
 }
 
@@ -34,8 +34,8 @@
   width: 155px;
 }
 
-.AddNewWords:hover .add-icon svg{
-    transform: rotate(-180deg);
+.AddNewWords:hover .add-icon svg {
+  transform: rotate(-180deg);
 }
 
 .add-text p {
@@ -43,4 +43,21 @@
   overflow: hidden;
   width: 122px;
   margin: 0 1rem;
+}
+
+/*   Disabled   */
+.AddNewWords:disabled {
+  cursor: not-allowed;
+}
+
+.AddNewWords:disabled:hover .add-text {
+  width: 0;
+}
+
+.AddNewWords:disabled .add-icon svg {
+  fill: rgb(212, 212, 212);
+}
+
+.AddNewWords:disabled:hover .add-icon svg {
+  transform: none;
 }

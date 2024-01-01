@@ -1,0 +1,40 @@
+.WordInfo {
+  margin: 2rem 0;
+}
+
+.word-info {
+  padding: 0.5rem 0;
+  min-width: 216px;
+  height: 267px;
+  border: 1px solid var(--positive-green);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.word-info .word {
+  margin: 1rem 0 2rem;
+  font-size: 18px;
+}
+
+.word-info .right-answer .text {
+  color: var(--positive-green);
+  margin-bottom: 1rem;
+}
+
+.word-info .user-answer .text {
+  margin-bottom: 1rem;
+}
+
+.word-info .right-answer .caption,
+.word-info .user-answer .caption,
+.word-info .phonetic .caption {
+  font-size: 10px;
+  margin-bottom: 5px;
+  color: var(--light-black-1);
+}
+
+.word-info .phonetic {
+  color: var(--light-black-1);
+}

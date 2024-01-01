@@ -49,3 +49,8 @@ export type WordsCount = {
   cells: CellsCounts;
   removed: number;
 };
+
+export type CustomElementProps<T extends keyof JSX.IntrinsicElements> =
+  React.ComponentPropsWithoutRef<T> & {
+    children?: React.ReactNode;
+  };

@@ -6,11 +6,13 @@ import { CustomElementProps } from "../lib/type";
 interface CustomBtnProps extends CustomElementProps<"button"> {
   tooltipText?: string | null;
   tooltipClassName?: string | null;
+  readyClass?: string | null;
 }
 
 const CustomBtn = ({
   children,
   className,
+  readyClass,
   tooltipClassName,
   tooltipText,
   ...rest
@@ -47,7 +49,12 @@ const CustomBtn = ({
           {tooltipText}
         </div>
       )}
-      <button className={`${classes["btn"]} ${className}`} {...rest}>
+      <button
+        className={`${classes["btn"]} ${className} ${
+          readyClass ? classes[readyClass] : null
+        }`}
+        {...rest}
+      >
         {children}
       </button>
     </div>

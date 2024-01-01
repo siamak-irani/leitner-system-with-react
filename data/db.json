@@ -160153,12 +160153,11 @@
     },
     "removed": 0
   },
-  
   "review_array": [],
   "progress": {
     "active_cell": 0,
-    "selected_word_index": 5,
-    "current_word_index": 5
+    "selected_word_index": 8,
+    "current_word_index": 8
   },
   "c1": {
     "p1": []

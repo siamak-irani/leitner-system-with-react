@@ -13,6 +13,8 @@ body {
   font-family: Vazirmatn;
   text-align: right;
   color: var(--light-black-0);
+  min-height: 100vh;
+  position: relative;
 }
 
 code {
@@ -31,6 +33,8 @@ code {
   --light-black-0: rgb(44, 44, 44);
   --light-black-1: rgb(94, 94, 94);
   --error-red: rgb(255, 38, 0);
+  --positive-green: rgb(14, 203, 129);
+  --negative-red: rgb(246, 70, 93);
 }
 
 button {
@@ -48,6 +52,6 @@ input {
   all: unset;
 }
 
-ul{
+ul {
   list-style: none;
 }

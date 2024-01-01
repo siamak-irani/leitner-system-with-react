@@ -35,12 +35,9 @@
   border-radius: 0.5em;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px rgba(255, 244, 255, 2);
 }
 
-/* .btn:hover {
-  filter: brightness(0.7);
-} */
 .btn:active {
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
@@ -52,4 +49,35 @@
   color: #7e7e7e !important;
   box-shadow: none;
   filter: grayscale(1) !important;
+}
+
+/* Negative btn */
+.negative {
+  color: var(--negative-red);
+}
+
+.negative:hover {
+  background-color: var(--negative-red);
+  color: white;
+}
+
+.negative:active {
+  background-color: transparent;
+  color: var(--negative-red);
+}
+
+/* Positive btn */
+
+.positive {
+  color: var(--positive-green);
+}
+
+.positive:hover {
+  background-color: var(--positive-green);
+  color: white;
+}
+
+.positive:active {
+  background-color: transparent;
+  color: var(--positive-green);
 }

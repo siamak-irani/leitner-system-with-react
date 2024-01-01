@@ -26,7 +26,6 @@ const ConfirmWord = ({
   selectedIndex,
 }: ConfirmWordProps) => {
   const navigate = useNavigate();
-  const queryClient = useQueryClient();
   const wordQuery = useWord(selectedIndex);
   const progressMutation = useProgressMutation();
   const progressQuery = useProgressQuery();
@@ -42,8 +41,6 @@ const ConfirmWord = ({
         navigate("/");
       });
   };
-
-  // console.log("data " + progressMutation.data )
 
   if (!isVisiable) return null;
 

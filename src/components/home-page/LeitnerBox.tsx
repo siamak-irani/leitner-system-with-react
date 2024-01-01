@@ -4,6 +4,7 @@ import CellElement from "./CellElement";
 import { WordsCount } from "../../lib/type";
 import BoxContainer from "./BoxContainer";
 import AddNewWords from "./AddNewWords";
+import WordDisplayBox from "./WordDisplayBox";
 
 type LeitnerBoxProps = {
   data: WordsCount;
@@ -16,6 +17,7 @@ const LeitnerBox = ({ data }: LeitnerBoxProps) => {
     <div className={`${classes["LeitnerBox"]}`}>
       <AddNewWords />
       <BoxContainer cells={cells} />
+      {/* <WordDisplayBox /> */}
     </div>
   );
 };
