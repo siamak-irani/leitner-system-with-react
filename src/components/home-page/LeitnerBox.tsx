@@ -21,7 +21,7 @@ const LeitnerBox = ({ data }: LeitnerBoxProps) => {
         <ScrollButton text="لغات جدید اضافه کنید">
           <AddIcon />
         </ScrollButton>
-        <ScrollButton text="آغاز دور جدید">
+        <ScrollButton text="آغاز دور جدید" iconAnimation={false}>
           <PlayIcon />
         </ScrollButton>
       </div>
