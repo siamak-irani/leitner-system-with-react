@@ -1,0 +1,64 @@
+.ScrollButton {
+    margin:0 .3rem;
+    cursor: pointer;
+  }
+  
+  .sroll-btn--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0rem 1rem; */
+    border-radius: 100px !important;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+  }
+  
+  .icon svg {
+    margin: 0.5rem;
+    fill: var(--light-black-1);
+    transition: transform 0.4s;
+  }
+  
+  .text {
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: width 0.4s;
+    width: 0;
+  }
+
+  .ScrollButton:hover .text {
+    width: 155px;
+
+  }
+  
+  .ScrollButton:hover .icon svg {
+    transform: rotate(-180deg);
+  }
+  
+  .text p {
+    font-size: 14px;
+    overflow: hidden;
+    width: 130px;
+    margin: 0 1rem;
+  }
+  
+  /*   Disabled   */
+  .ScrollButton:disabled {
+    cursor: not-allowed;
+  }
+  
+  .ScrollButton:disabled:hover .text {
+    width: 0;
+  }
+  
+  .ScrollButton:disabled .icon svg {
+    fill: rgb(212, 212, 212);
+  }
+  
+  .ScrollButton:disabled:hover .icon svg {
+    transform: none;
+  }

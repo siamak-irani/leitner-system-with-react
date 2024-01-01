@@ -1,5 +1,7 @@
 import { useProgressQuery } from "./use-progress-qurey"
 
 export const useLeitner = ()=>{
-    const progress = useProgressQuery()
+    const progressQuery = useProgressQuery()
+    const {active_cell} = progressQuery.data
+    
 }
