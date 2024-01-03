@@ -5,9 +5,9 @@ import App from "./App";
 import { QueryClientProvider, QueryClient } from "react-query";
 
 const queryClient = new QueryClient({
-  // defaultOptions: {
-  //   queries: { staleTime: Infinity, retry: 1, refetchOnWindowFocus: false },
-  // },
+  defaultOptions: {
+    queries: { staleTime: Infinity, retry: 1, refetchOnWindowFocus: false },
+  },
 });
 
 const root = ReactDOM.createRoot(

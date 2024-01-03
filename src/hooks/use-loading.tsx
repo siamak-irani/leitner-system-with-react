@@ -20,13 +20,32 @@ export const useLoading = (queries: UseQueryResult<any, unknown>[]) => {
   })();
 
   const elementLoadingRenderer = (() => {
-    if (isLoading) return <LoadingSpinner />;
+    if (isLoading)
+      return { element: <LoadingSpinner />, isLoading: true, isError: false };
     if (isError)
-      return (
-        <button>
-          <LoadingSpinner noAnimation={true} />
-        </button>
-      );
+      return {
+        element: (
+          <button
+            onClick={() => {
+              queries.forEach((query) => {
+                query.refetch();
+              });
+            }}
+            style={{
+              background: "white",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "50%",
+              margin: "auto",
+            }}
+          >
+            <LoadingSpinner noAnimation={true} />
+          </button>
+        ),
+        isLoading: false,
+        isError: true,
+      };
     return null;
   })();
 

@@ -3,10 +3,14 @@ import { ReactComponent as LoadingSVG } from "../files/icons/refresh_FILL0_wght4
 
 import classes from "./LoadingSpinner.module.css";
 
-const LoadingSpinner = () => {
+type LoadingSpinnerProps = {
+  noAnimation?: boolean;
+};
+
+const LoadingSpinner = ({ noAnimation = false }: LoadingSpinnerProps) => {
   return (
     <div className={`${classes["LoadingSpinner"]}`}>
-      <LoadingSVG />
+      <LoadingSVG style={noAnimation ? { animation: "none" } : {}} />
     </div>
   );
 };

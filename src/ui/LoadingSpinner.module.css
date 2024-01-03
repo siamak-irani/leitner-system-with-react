@@ -1,12 +1,14 @@
 .LoadingSpinner {
+  width: 30px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin:auto;
 }
 
 .LoadingSpinner svg {
-  fill: rgb(189, 189, 189);
+  fill: rgb(122, 122, 122);
   animation: rotation 1s ease-in-out;
   animation-iteration-count: infinite;
 }

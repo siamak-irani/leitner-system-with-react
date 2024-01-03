@@ -28,6 +28,19 @@ code {
   box-sizing: border-box;
 }
 
+*{
+  animation: fade-in .2s;
+}
+
+@keyframes fade-in {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 :root {
   --body-bg: #e0e0e0;
   --light-black-0: rgb(44, 44, 44);

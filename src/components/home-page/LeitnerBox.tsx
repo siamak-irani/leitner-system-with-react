@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import classes from "./LeitnerBox.module.css";
-import { WordsCount } from "../../lib/type";
+import { Progress, WordsCount } from "../../lib/type";
 import BoxContainer from "./BoxContainer";
 import StartButtons from "./StartButtons";
 import { useProgressQuery } from "../../hooks/use-progress-qurey";
-import WordDisplayModal from "./WordDisplayModal";
+import WordDisplayModal from "./word-modal/WordDisplayModal";
+import { useLoading } from "../../hooks/use-loading";
 
 type LeitnerBoxProps = {
   data: WordsCount;
@@ -12,9 +13,12 @@ type LeitnerBoxProps = {
 
 const LeitnerBox = ({ data }: LeitnerBoxProps) => {
   const [wordModalIsOpen, setWordModalIsOpen] = useState(false);
-  // const progressQuery = useProgressQuery();
-  // const { active_cell } = progressQuery.data;
-  const active_cell: number = 1;
+  const progressQuery = useProgressQuery();
+  const { active_cell } = progressQuery.data;
+
+
+  const { elementLoadingRenderer } = useLoading([progressQuery]);
+  if (elementLoadingRenderer) return elementLoadingRenderer.element;
 
   const openWordModal = () => {
     setWordModalIsOpen(true);

@@ -1,0 +1,13 @@
+.word-display-container {
+  background-color: var(--body-bg);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: -15rem;
+  cursor: pointer;
+}

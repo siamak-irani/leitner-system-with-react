@@ -21,9 +21,9 @@ export type PaginatedWordsData = {
 };
 
 export type Progress = {
-  active_cell?: number;
-  selected_word_index?: number;
-  current_word_index?: number;
+  active_cell: CellNumber;
+  selected_word_index: number;
+  current_word_index: number;
 };
 
 export type PartitionCounts = {
@@ -54,3 +54,5 @@ export type CustomElementProps<T extends keyof JSX.IntrinsicElements> =
   React.ComponentPropsWithoutRef<T> & {
     children?: React.ReactNode;
   };
+
+export type CellNumber = 0 | 1 | 2 | 3 | 4 | 5;

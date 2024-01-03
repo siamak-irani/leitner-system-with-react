@@ -5,13 +5,15 @@ import { useNavigate } from "react-router-dom";
 import { useProgressQuery } from "../hooks/use-progress-qurey";
 import ErrorElement from "../components/ErrorElement";
 import RouterLoading from "../components/RouterLoading";
+import { useLoading } from "../hooks/use-loading";
 
 const RootElement = () => {
   const progressQuery = useProgressQuery();
+  const { routerLoadingRenderer, elementLoadingRenderer } = useLoading([
+    progressQuery,
+  ]);
 
-  if (progressQuery.isLoading) return <RouterLoading />;
-  if (progressQuery.isError)
-    return <ErrorElement error={progressQuery.error} />;
+  if (routerLoadingRenderer) return routerLoadingRenderer;
 
   return (
     <div>

@@ -2,11 +2,11 @@ import React from "react";
 
 import classes from "./BoxContainer.module.css";
 import CellElement from "./CellElement";
-import { CellsCounts } from "../../lib/type";
+import { CellNumber, CellsCounts } from "../../lib/type";
 
 type BoxContainerProps = {
   cells: CellsCounts;
-  activeCell: number;
+  activeCell: CellNumber;
   onWordReview: () => void;
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./AnswerForm.module.css";
-import CustomBtn from "../CustomBtn";
+import CustomBtn from "../../CustomBtn";
 
 const AnswerForm = () => {
   return (
