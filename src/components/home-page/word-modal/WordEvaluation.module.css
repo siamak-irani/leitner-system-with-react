@@ -6,5 +6,12 @@
 .evaluation p {
   font-size: 12px;
   direction: rtl;
+}
+
+:global(.word-modal-p) .evaluation p {
   color: var(--positive-green);
+}
+
+:global(.word-modal-n) .evaluation p {
+  color: var(--negative-red);
 }

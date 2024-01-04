@@ -5,3 +5,14 @@ export const LAST_PARTITION = {
   c4: "p8",
   c5: "p15",
 };
+
+// const x = [
+//   [["سلام", "hello", null, null, 1]],
+//   null,
+//   "en",
+//   null,
+//   null,
+//   null,
+//   null,
+//   [],
+// ];

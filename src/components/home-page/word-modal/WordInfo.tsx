@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import classes from "./WordInfo.module.css";
 import Wrapper from "../../../ui/Wrapper";
@@ -8,20 +8,27 @@ import { useWordsQuery } from "../../../hooks/use-words-query";
 import { useLoading } from "../../../hooks/use-loading";
 import { CellNumber, Progress, Word } from "../../../lib/type";
 import { useGoogleTranslateQuery } from "../../../hooks/use-google-translate-query";
+import WordInfoRenderer from "./WordInfoRenderer";
+import { evaluationFunc } from "../../../utils/evaluation-fucn";
 
 type WordInfoProps = {
-  evaluationClass: "positive" | "negative" | null;
   isEvaluated: boolean;
+  setIsEvaluated: (isEvaluated: boolean) => void;
   enWord: Word;
   activeCell: CellNumber;
+  setAnswerIsTrue: (isTrue: boolean) => void;
 };
 
 const WordInfo = ({
-  evaluationClass,
   isEvaluated,
   enWord,
   activeCell,
+  setIsEvaluated,
+  setAnswerIsTrue,
 }: WordInfoProps) => {
+  const [userAnswerRenderer, setUserAnswerRenderer] =
+    useState<JSX.Element | null>(null);
+
   const isAddNewWordModal = activeCell === 0;
 
   const googleQuery = useGoogleTranslateQuery(enWord.spelling, {
@@ -34,39 +41,30 @@ const WordInfo = ({
   const word = googleQuery.data;
   const equivalent = enWord.spelling;
 
-  console.log(word)
+  const wordFromSubmitHandler = (
+    e: React.FormEvent<HTMLFormElement>,
+    userAnswer: string
+  ) => {
+    e.preventDefault();
+    const { areEqual, EvaluatedAnswer } = evaluationFunc(
+      equivalent,
+      userAnswer
+    );
+    setUserAnswerRenderer(EvaluatedAnswer);
+    setAnswerIsTrue(areEqual);
+    setIsEvaluated(true);
+  };
 
   return (
-    <div
-      className={`${classes["WordInfo"]} ${
-        evaluationClass && classes[evaluationClass]
-      }`}
-    >
-      <Wrapper className={`${classes["word-info"]}`}>
-        <div className={`${classes["word"]}`}>{word}</div>
-        <div className={`${classes["equivalent"]}`}>
-          {isEvaluated && (
-            <div className={`${classes["right-answer"]}`}>
-              <div className={`${classes["caption"]}`}>معادل واژه</div>
-              <div className={`${classes["text"]}`}>{equivalent}</div>
-            </div>
-          )}
-
-          {!isAddNewWordModal && isEvaluated && (
-            <div className={`${classes["user-answer"]}`}>
-              <div className={`${classes["caption"]}`}>پاسخ شما</div>
-              <div className={`${classes["text"]}`}>hello</div>
-            </div>
-          )}
-          {isEvaluated && (
-            <div className={`${classes["phonetic"]}`}>
-              <div className={`${classes["caption"]}`}>فونتیک</div>
-              <div className={`${classes["text"]}`}>/həˈlō/</div>
-            </div>
-          )}
-        </div>
-        {!isEvaluated && <AnswerForm />}
-      </Wrapper>
+    <div className={`${classes["WordInfo"]}`}>
+      <WordInfoRenderer
+        word={word}
+        equivalent={equivalent}
+        isEvaluated={isEvaluated}
+        isAddNewWordModal={isAddNewWordModal}
+        formSubmitHandler={wordFromSubmitHandler}
+        userAnswerRenderer={userAnswerRenderer}
+      />
     </div>
   );
 };

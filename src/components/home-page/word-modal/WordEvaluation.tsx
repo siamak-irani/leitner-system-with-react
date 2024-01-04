@@ -4,21 +4,17 @@ import classes from "./WordEvaluation.module.css";
 import { CellNumber } from "../../../lib/type";
 
 type WordEvaluationProps = {
-  isAddNewWordModal: boolean;
-  evaluated: boolean;
+  answerIsTrue: boolean;
+  isEvaluated: boolean;
 };
 
-const WordEvaluation = ({
-  isAddNewWordModal,
-  evaluated,
-}: WordEvaluationProps) => {
+const WordEvaluation = ({ isEvaluated, answerIsTrue }: WordEvaluationProps) => {
   return (
     <>
-      {!isAddNewWordModal && evaluated && (
-        <div className={`${classes["evaluation"]}`}>
-          <p>حدس شما درست بود!</p>
-        </div>
-      )}
+      <div className={`${classes["evaluation"]}`}>
+        {isEvaluated &&
+          (answerIsTrue ? <p>حدس شما درست بود!</p> : <p>اشتباه حدس زدید</p>)}
+      </div>
     </>
   );
 };

@@ -2,16 +2,12 @@ import React, { useState } from "react";
 
 import classes from "./WordDisplayModal.module.css";
 import Modal from "../../../ui/Modal";
-import AnswerForm from "./AnswerForm";
-import Wrapper from "../../../ui/Wrapper";
 import ManualConfirm from "./ManualConfirm";
 import WordInfo from "./WordInfo";
 import { ReactComponent as CloseIcon } from "../../../files/icons/close_FILL0_wght400_GRAD0_opsz48.svg";
-import { useProgressQuery } from "../../../hooks/use-progress-qurey";
 import WordModalHeader from "./WordModalHeader";
 import { CellNumber } from "../../../lib/type";
 import WordEvaluation from "./WordEvaluation";
-import { useWordsQuery } from "../../../hooks/use-words-query";
 import { useReviewQuery } from "../../../hooks/use-review-query";
 import { useLoading } from "../../../hooks/use-loading";
 
@@ -25,25 +21,28 @@ const WordDisplayModal = ({
   activeCell,
 }: WordDisplayModalProps) => {
   const [answerIsTrue, setAnswerIsTrue] = useState(false);
-  const [evaluated, setEvaluated] = useState(false);
+  const [isEvaluated, setIsEvaluated] = useState(false);
 
   const reviewQuery = useReviewQuery({ enabled: !!activeCell });
 
   const { elementLoadingRenderer } = useLoading([reviewQuery]);
 
   const isAddNewWordModal = activeCell === 0;
-  const evaluationClass = isAddNewWordModal
-    ? null
-    : answerIsTrue
-    ? "positive"
-    : "negative";
+  const evaluationClass =
+    isAddNewWordModal || !isEvaluated
+      ? null
+      : answerIsTrue
+      ? "word-modal-p"
+      : "word-modal-n";
 
   return (
     <Modal
       className={`${classes["word-display-modal"]}`}
       onClick={onCloseModal}
     >
-      <div className={`${classes["word-display-container"]}`}>
+      <div
+        className={`${classes["word-display-container"]} ${evaluationClass}`}
+      >
         {elementLoadingRenderer ? (
           <>
             <div>{elementLoadingRenderer.element}</div>
@@ -67,19 +66,20 @@ const WordDisplayModal = ({
             />
 
             <WordEvaluation
-              isAddNewWordModal={isAddNewWordModal}
-              evaluated={evaluated}
+              isEvaluated={isEvaluated}
+              answerIsTrue={answerIsTrue}
             />
             <WordInfo
               enWord={reviewQuery.data[0]}
-              evaluationClass={evaluationClass}
-              isEvaluated={evaluated}
+              isEvaluated={isEvaluated}
+              setIsEvaluated={setIsEvaluated}
               activeCell={activeCell}
+              setAnswerIsTrue={setAnswerIsTrue}
             />
 
             <ManualConfirm
               isAddNewWordModal={isAddNewWordModal}
-              evaluated={evaluated}
+              isEvaluated={isEvaluated}
             />
           </>
         )}
