@@ -3,7 +3,19 @@ export type Partition = {
   isEmpty: boolean;
 };
 
-export type Cell = Partition[];
+// export type Cell = Partition[];
+
+export type Cell = Partial<{
+  p1: WordMap;
+  p2: WordMap;
+  p3: WordMap;
+  p4: WordMap;
+  p5: WordMap;
+}>;
+
+export type WordMap = {
+  [K in Word["id"]]: Word;
+};
 
 export type Word = {
   id: number;
@@ -56,3 +68,9 @@ export type CustomElementProps<T extends keyof JSX.IntrinsicElements> =
   };
 
 export type CellNumber = 0 | 1 | 2 | 3 | 4 | 5;
+
+export type ReviewMutateType = "AnswerIsTrue" | "AnswerIsNotTrue" | "FillArray";
+
+// export type WordsObject = {
+//   [key: number]: Word;
+// };

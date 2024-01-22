@@ -20,7 +20,7 @@ const WordDisplayModal = ({
   onCloseModal,
   activeCell,
 }: WordDisplayModalProps) => {
-  const [answerIsTrue, setAnswerIsTrue] = useState(false);
+  const [wordsAreMatched, setWordsAreMatched] = useState(false);
   const [isEvaluated, setIsEvaluated] = useState(false);
 
   const reviewQuery = useReviewQuery({ enabled: !!activeCell });
@@ -31,9 +31,11 @@ const WordDisplayModal = ({
   const evaluationClass =
     isAddNewWordModal || !isEvaluated
       ? null
-      : answerIsTrue
+      : wordsAreMatched
       ? "word-modal-p"
       : "word-modal-n";
+
+  const current_word = reviewQuery.data?.[0];
 
   return (
     <Modal
@@ -67,17 +69,20 @@ const WordDisplayModal = ({
 
             <WordEvaluation
               isEvaluated={isEvaluated}
-              answerIsTrue={answerIsTrue}
+              wordsAreMatched={wordsAreMatched}
             />
+
             <WordInfo
-              enWord={reviewQuery.data[0]}
+              currentWord={current_word!}
               isEvaluated={isEvaluated}
               setIsEvaluated={setIsEvaluated}
               activeCell={activeCell}
-              setAnswerIsTrue={setAnswerIsTrue}
+              setWordsAreMatched={setWordsAreMatched}
             />
 
             <ManualConfirm
+              activeCell={activeCell}
+              currentWord={current_word!}
               isAddNewWordModal={isAddNewWordModal}
               isEvaluated={isEvaluated}
             />

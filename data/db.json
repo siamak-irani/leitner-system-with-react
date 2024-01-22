@@ -160153,16 +160153,8 @@
     },
     "removed": 0
   },
-  "review_array": [
-    {
-      "id": 0,
-      "spelling": "the",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
+  "review_array": {
+   "1": {
       "id": 1,
       "spelling": "of",
       "phonetic": "",
@@ -160170,862 +160162,84 @@
       "difficulty": 0,
       "free_dictionary_api": ""
     },
-    {
+    "2":{
       "id": 2,
       "spelling": "and",
       "phonetic": "",
       "translation": "",
       "difficulty": 0,
       "free_dictionary_api": ""
-    },
-    {
-      "id": 3,
-      "spelling": "to",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 4,
-      "spelling": "a",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 5,
-      "spelling": "in",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 6,
-      "spelling": "for",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 7,
-      "spelling": "is",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 8,
-      "spelling": "on",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 9,
-      "spelling": "that",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 10,
-      "spelling": "by",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 11,
-      "spelling": "this",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 12,
-      "spelling": "with",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 13,
-      "spelling": "i",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 14,
-      "spelling": "you",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 15,
-      "spelling": "it",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 16,
-      "spelling": "not",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 17,
-      "spelling": "or",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 18,
-      "spelling": "be",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 19,
-      "spelling": "are",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 20,
-      "spelling": "from",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 21,
-      "spelling": "at",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 22,
-      "spelling": "as",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 23,
-      "spelling": "your",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 24,
-      "spelling": "all",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 25,
-      "spelling": "have",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 26,
-      "spelling": "new",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 27,
-      "spelling": "more",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 28,
-      "spelling": "an",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 29,
-      "spelling": "was",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 30,
-      "spelling": "we",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 31,
-      "spelling": "will",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 32,
-      "spelling": "home",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 33,
-      "spelling": "can",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 34,
-      "spelling": "us",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 35,
-      "spelling": "about",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
-    },
-    {
-      "id": 36,
-      "spelling": "if",
-      "phonetic": "",
-      "translation": "",
-      "difficulty": 0,
-      "free_dictionary_api": ""
     }
-  ],
+  },
   "progress": {
-    "active_cell": 1,
+    "active_cell": 0,
     "selected_word_index": 8,
     "current_word_index": 8
   },
   "c1": {
-    "p1": [
-      {
-        "id": 0,
-        "spelling": "the",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 1,
-        "spelling": "of",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 2,
-        "spelling": "and",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 3,
-        "spelling": "to",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 4,
-        "spelling": "a",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 5,
-        "spelling": "in",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 6,
-        "spelling": "for",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 7,
-        "spelling": "is",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 8,
-        "spelling": "on",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9,
-        "spelling": "that",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 10,
-        "spelling": "by",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 11,
-        "spelling": "this",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 12,
-        "spelling": "with",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 13,
-        "spelling": "i",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 14,
-        "spelling": "you",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 15,
-        "spelling": "it",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 16,
-        "spelling": "not",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 17,
-        "spelling": "or",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 18,
-        "spelling": "be",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 19,
-        "spelling": "are",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 20,
-        "spelling": "from",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 21,
-        "spelling": "at",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 22,
-        "spelling": "as",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 23,
-        "spelling": "your",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 24,
-        "spelling": "all",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 25,
-        "spelling": "have",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 26,
-        "spelling": "new",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 27,
-        "spelling": "more",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 28,
-        "spelling": "an",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 29,
-        "spelling": "was",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 30,
-        "spelling": "we",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 31,
-        "spelling": "will",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 32,
-        "spelling": "home",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 33,
-        "spelling": "can",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 34,
-        "spelling": "us",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 35,
-        "spelling": "about",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 36,
-        "spelling": "if",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      }
-    ]
+    "p1": {}
   },
   "c2": {
-    "p1": [],
-    "p2": [
-      {
-        "id": 9578,
-        "spelling": "mails",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9579,
-        "spelling": "backing",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9580,
-        "spelling": "greenhouse",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9581,
-        "spelling": "sleeps",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9582,
-        "spelling": "vc",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9583,
-        "spelling": "blake",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9584,
-        "spelling": "transparency",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9585,
-        "spelling": "dee",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9586,
-        "spelling": "travis",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9587,
-        "spelling": "wx",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9588,
-        "spelling": "endless",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9589,
-        "spelling": "figured",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9590,
-        "spelling": "orbit",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9591,
-        "spelling": "currencies",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9592,
-        "spelling": "niger",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9593,
-        "spelling": "bacon",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9594,
-        "spelling": "survivors",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9595,
-        "spelling": "positioning",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9596,
-        "spelling": "heater",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9597,
-        "spelling": "colony",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9598,
-        "spelling": "cannon",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9599,
-        "spelling": "circus",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9600,
-        "spelling": "promoted",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9601,
-        "spelling": "forbes",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9602,
-        "spelling": "mae",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9603,
-        "spelling": "moldova",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9604,
-        "spelling": "mel",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      },
-      {
-        "id": 9605,
-        "spelling": "descending",
-        "phonetic": "",
-        "translation": "",
-        "difficulty": 0,
-        "free_dictionary_api": ""
-      }
-    ]
+    "p1": {},
+    "p2":{}
   },
   "c3": {
-    "p1": [],
-    "p2": [],
-    "p3": [],
-    "p4": []
+    "p1": {},
+    "p2": {},
+    "p3": {},
+    "p4": {}
   },
   "c4": {
-    "p1": [],
-    "p2": [],
-    "p3": [],
-    "p4": [],
-    "p5": [],
-    "p6": [],
-    "p7": [],
-    "p8": []
+    "p1": {},
+    "p2": {},
+    "p3": {},
+    "p4": {},
+    "p5": {},
+    "p6": {},
+    "p7": {},
+    "p8": {}
   },
   "c5": {
-    "p1": [],
-    "p2": [],
-    "p3": [],
-    "p4": [],
-    "p5": [],
-    "p6": [],
-    "p7": [],
-    "p8": [],
-    "p9": [],
-    "p10": [],
-    "p11": [],
-    "p12": [],
-    "p13": [],
-    "p14": [],
-    "p15": []
+    "p1": {},
+    "p2": {},
+    "p3": {},
+    "p4": {},
+    "p5": {},
+    "p6": {},
+    "p7": {},
+    "p8": {},
+    "p9": {},
+    "p10": {},
+    "p11": {},
+    "p12": {},
+    "p13": {},
+    "p14": {},
+    "p15": {}
   },
-  "removed_words": [],
+  "removed_words": {},
   "pushed_forward": {
     "c1": false,
     "c2": false,
     "c3": false,
     "c4": false,
     "c5": false
-  }
-  ,
-  "google":[[["سلام","hello",null,null,1]],null,"en",null,null,null,null,[]]
+  },
+  "google": [
+    [
+      [
+        "سلام",
+        "hello",
+        null,
+        null,
+        1
+      ]
+    ],
+    null,
+    "en",
+    null,
+    null,
+    null,
+    null,
+    []
+  ]
 }

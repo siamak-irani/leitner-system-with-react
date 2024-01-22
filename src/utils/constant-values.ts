@@ -16,3 +16,30 @@ export const LAST_PARTITION = {
 //   null,
 //   [],
 // ];
+
+const x = {
+  "feaif": {
+    "id": 0,
+    "spelling": "the",
+    "phonetic": "",
+    "translation": "",
+    "difficulty": 0,
+    "free_dictionary_api": ""
+  },
+  "iaef": {
+    "id": 1,
+    "spelling": "of",
+    "phonetic": "",
+    "translation": "",
+    "difficulty": 0,
+    "free_dictionary_api": ""
+  },
+  "fiaef": {
+    "id": 2,
+    "spelling": "and",
+    "phonetic": "",
+    "translation": "",
+    "difficulty": 0,
+    "free_dictionary_api": ""
+  }
+}

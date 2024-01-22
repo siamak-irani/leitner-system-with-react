@@ -7,5 +7,5 @@ export const useReviewQuery = (opitons?: { enabled?: boolean }) => {
     queryFn: getReviewArr,
     enabled: opitons?.enabled,
   });
-  return reviewQuery
+  return reviewQuery;
 };

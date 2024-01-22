@@ -4,7 +4,6 @@ import classes from "./WordInfo.module.css";
 import Wrapper from "../../../ui/Wrapper";
 import AnswerForm from "./AnswerForm";
 import { useProgressQuery } from "../../../hooks/use-progress-qurey";
-import { useWordsQuery } from "../../../hooks/use-words-query";
 import { useLoading } from "../../../hooks/use-loading";
 import { CellNumber, Progress, Word } from "../../../lib/type";
 import { useGoogleTranslateQuery } from "../../../hooks/use-google-translate-query";
@@ -14,32 +13,32 @@ import { evaluationFunc } from "../../../utils/evaluation-fucn";
 type WordInfoProps = {
   isEvaluated: boolean;
   setIsEvaluated: (isEvaluated: boolean) => void;
-  enWord: Word;
+  currentWord: Word;
   activeCell: CellNumber;
-  setAnswerIsTrue: (isTrue: boolean) => void;
+  setWordsAreMatched: (isTrue: boolean) => void;
 };
 
 const WordInfo = ({
   isEvaluated,
-  enWord,
+  currentWord,
   activeCell,
   setIsEvaluated,
-  setAnswerIsTrue,
+  setWordsAreMatched,
 }: WordInfoProps) => {
   const [userAnswerRenderer, setUserAnswerRenderer] =
     useState<JSX.Element | null>(null);
 
   const isAddNewWordModal = activeCell === 0;
 
-  const googleQuery = useGoogleTranslateQuery(enWord.spelling, {
-    enabled: !!enWord,
+  const googleQuery = useGoogleTranslateQuery(currentWord.spelling, {
+    enabled: !!currentWord,
   });
 
   const { elementLoadingRenderer } = useLoading([googleQuery]);
   if (elementLoadingRenderer) return elementLoadingRenderer.element;
 
   const word = googleQuery.data;
-  const equivalent = enWord.spelling;
+  const equivalent = currentWord.spelling;
 
   const wordFromSubmitHandler = (
     e: React.FormEvent<HTMLFormElement>,
@@ -51,7 +50,7 @@ const WordInfo = ({
       userAnswer
     );
     setUserAnswerRenderer(EvaluatedAnswer);
-    setAnswerIsTrue(areEqual);
+    setWordsAreMatched(areEqual);
     setIsEvaluated(true);
   };
 
